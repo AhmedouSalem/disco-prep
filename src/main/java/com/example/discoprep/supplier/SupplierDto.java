@@ -13,6 +13,8 @@ public record SupplierDto(
 
         String city,
 
-        Boolean active
+        Boolean active,
+
+        Integer greenScore
 ) {
 }

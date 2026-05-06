@@ -16,13 +16,17 @@ public class Supplier {
 
     private boolean active = true;
 
+    @Column(name = "green_score")
+    private Integer greenScore = 0;
+
     public Supplier() {
     }
 
-    public Supplier(String name, String country, String city) {
+    public Supplier(String name, String country, String city, Integer greenScore) {
         this.name = name;
         this.country = country;
         this.city = city;
+        this.greenScore = greenScore;
         this.active = true;
     }
 
@@ -46,6 +50,10 @@ public class Supplier {
         return active;
     }
 
+    public Integer getGreenScore() {
+        return greenScore;
+    }
+
     public void setName(String name) {
         this.name = name;
     }
@@ -60,5 +68,9 @@ public class Supplier {
 
     public void setActive(boolean active) {
         this.active = active;
+    }
+
+    public void setGreenScore(Integer greenScore) {
+        this.greenScore = greenScore;
     }
 }

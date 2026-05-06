@@ -1,0 +1,14 @@
+databaseChangeLog:
+  - changeSet:
+      id: 002-add-green-score
+      author: ahmedou
+      changes:
+        - addColumn:
+            tableName: suppliers
+            columns:
+              - column:
+                  name: green_score
+                  type: INTEGER
+                  defaultValueNumeric: 0
+                  constraints:
+                    nullable: false

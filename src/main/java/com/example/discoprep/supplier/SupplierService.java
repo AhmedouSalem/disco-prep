@@ -17,7 +17,8 @@ public class SupplierService {
         Supplier supplier = new Supplier(
                 dto.name(),
                 dto.country(),
-                dto.city()
+                dto.city(),
+                dto.greenScore() == null ? 0 : dto.greenScore()
         );
 
         if (dto.active() != null) {
@@ -41,7 +42,8 @@ public class SupplierService {
                 supplier.getName(),
                 supplier.getCountry(),
                 supplier.getCity(),
-                supplier.isActive()
+                supplier.isActive(),
+                supplier.getGreenScore()
         );
     }
 }

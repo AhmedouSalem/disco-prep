@@ -1,3 +1,5 @@
 databaseChangeLog:
   - include:
       file: db/changelog/001-create-supplier-table.yaml
+  - include:
+      file: db/changelog/002-add-green-score.yaml
