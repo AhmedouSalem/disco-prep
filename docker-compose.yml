@@ -1,0 +1,15 @@
+services:
+  postgres:
+    image: postgres:16
+    container_name: disco-prep-postgres
+    environment:
+      POSTGRES_DB: disco_db
+      POSTGRES_USER: disco
+      POSTGRES_PASSWORD: disco
+    ports:
+      - "5432:5432"
+    volumes:
+      - disco_pg_data:/var/lib/postgresql/data
+
+volumes:
+  disco_pg_data:
